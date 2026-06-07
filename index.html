@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKI Genap Kelas X – Materi Lengkap</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F0D080;
+    --emerald: #1A6B4A;
+    --emerald-light: #2E9E6E;
+    --navy: #0D1B2A;
+    --cream: #FBF5E6;
+    --rust: #C0522A;
+    --sky: #1A7DA8;
+    --purple: #5A3472;
+    --bg: #0D1B2A;
+    --card-bg: #162435;
+    --text: #EEE6D0;
+    --muted: #8CA0B5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ─── NAV / HOME ─── */
+  #home {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 60% 0%, #1e3a5a 0%, #0D1B2A 60%);
+    padding: 40px 20px 60px;
+  }
+
+  .home-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 5px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  h1.main-title {
+    font-family: 'Amiri', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    color: var(--gold-light);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .sub-title {
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .chapter-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 16px;
+    padding: 22px 20px;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent-color, var(--gold));
+  }
+
+  .chapter-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201,168,76,0.5);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  }
+
+  .card-soal {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  /* ─── PAGE ─── */
+  .page {
+    display: none;
+    min-height: 100vh;
+    padding: 0 0 80px;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .page.active { display: block; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+  .page-hero {
+    padding: 40px 24px 32px;
+    position: relative;
+  }
+
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    transition: background 0.2s;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .back-btn:hover { background: rgba(255,255,255,0.14); }
+
+  .page-number {
+    font-size: 11px; font-weight: 900; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+
+  .page-title {
+    font-family: 'Amiri', serif;
+    font-size: clamp(24px, 4vw, 42px);
+    color: var(--gold-light);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .page-sub {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ─── CONTENT BLOCKS ─── */
+  .section {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .section-title::after {
+    content: ''; flex: 1; height: 1px; background: rgba(201,168,76,0.2);
+  }
+
+  .info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding: 14px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+  }
+
+  .info-icon { font-size: 22px; flex-shrink: 0; }
+
+  .info-label {
+    font-size: 11px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
+  }
+
+  .info-text { font-size: 15px; color: var(--text); line-height: 1.5; }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+
+  .highlight-box h4 { color: var(--gold-light); margin-bottom: 8px; font-size: 15px; }
+  .highlight-box p, .highlight-box li { color: var(--text); font-size: 14px; line-height: 1.7; }
+
+  .list-clean { list-style: none; }
+  .list-clean li {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px; line-height: 1.6;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+  .list-clean li:last-child { border-bottom: none; }
+  .list-clean li::before { content: '▸'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+  .timeline {
+    position: relative; padding-left: 24px;
+  }
+  .timeline::before {
+    content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .tl-item { position: relative; margin-bottom: 20px; }
+  .tl-dot {
+    position: absolute; left: -22px; top: 4px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--bg);
+  }
+  .tl-year {
+    font-size: 11px; font-weight: 900; letter-spacing: 1px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 3px;
+  }
+  .tl-text { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+  .compare-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .compare-col {
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px; padding: 16px;
+  }
+  .compare-col h4 {
+    font-size: 13px; font-weight: 800; margin-bottom: 10px;
+    color: var(--gold-light); text-align: center;
+    padding-bottom: 8px; border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .compare-col li {
+    font-size: 13px; color: var(--text); padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.5;
+  }
+
+  .key-box {
+    background: rgba(192,82,42,0.15);
+    border-left: 3px solid var(--rust);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+  .key-box.blue { background: rgba(26,125,168,0.15); border-color: var(--sky); }
+  .key-box.purple { background: rgba(90,52,114,0.2); border-color: var(--purple); }
+  .key-box.green { background: rgba(26,107,74,0.2); border-color: var(--emerald-light); }
+  .key-box h4 { font-size: 13px; font-weight: 800; color: var(--gold-light); margin-bottom: 6px; }
+  .key-box p, .key-box li { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+  .person-card {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: rgba(255,255,255,0.04); border-radius: 10px;
+    padding: 14px; margin-bottom: 12px;
+  }
+  .person-avatar {
+    width: 48px; height: 48px; border-radius: 50%; font-size: 22px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(201,168,76,0.2); flex-shrink: 0;
+  }
+  .person-name { font-size: 15px; font-weight: 800; color: var(--gold-light); margin-bottom: 3px; }
+  .person-role { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 6px; }
+  .person-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  .quiz-hint {
+    background: linear-gradient(135deg, rgba(26,107,74,0.2), rgba(26,107,74,0.05));
+    border: 1px solid rgba(46,158,110,0.3);
+    border-radius: 12px; padding: 16px; margin-top: 20px;
+  }
+  .quiz-hint-title {
+    font-size: 12px; font-weight: 900; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--emerald-light); margin-bottom: 8px;
+  }
+  .quiz-hint p { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+  .pill { 
+    display: inline-block; padding: 3px 10px; border-radius: 20px;
+    font-size: 11px; font-weight: 800; margin: 2px;
+  }
+  .pill-gold { background: rgba(201,168,76,0.2); color: var(--gold-light); }
+  .pill-rust { background: rgba(192,82,42,0.2); color: #E8885A; }
+  .pill-sky { background: rgba(26,125,168,0.2); color: #5AC8F5; }
+  .pill-green { background: rgba(46,158,110,0.2); color: #5AE0A8; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 600px) {
+    .compare-grid { grid-template-columns: 1fr; }
+    .chapter-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ─── PROGRESS BAR ─── */
+  .progress-bar-wrap {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(13,27,42,0.95);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 10px 24px;
+    display: flex; align-items: center; gap: 14px;
+    z-index: 100; backdrop-filter: blur(10px);
+  }
+  .progress-label { font-size: 12px; color: var(--muted); font-weight: 700; white-space: nowrap; }
+  .progress-bar { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 3px; transition: width 0.3s; }
+  .progress-count { font-size: 12px; color: var(--gold); font-weight: 900; white-space: nowrap; }
+
+  /* bottom nav for pages */
+  .page-nav {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(13,27,42,0.95);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 10px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    z-index: 100; backdrop-filter: blur(10px);
+  }
+  .nav-btn {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    color: var(--text); padding: 8px 16px; border-radius: 10px;
+    cursor: pointer; font-size: 13px; font-weight: 700;
+    font-family: 'Nunito', sans-serif; transition: all 0.2s;
+  }
+  .nav-btn:hover { background: rgba(201,168,76,0.2); border-color: var(--gold); color: var(--gold-light); }
+  .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .nav-page-label { font-size: 12px; color: var(--muted); font-weight: 700; text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ HOME ═══════════════════════════════════════════ -->
+<div id="home">
+  <div class="home-header">
+    <div class="badge">SKI • Kelas X • Genap 2025/2026</div>
+    <h1 class="main-title">Sejarah Kebudayaan Islam</h1>
+    <p class="sub-title">35 Materi · Daulah Umayyah, Andalusia & Abbasiyah · MAN 1 Bandar Lampung</p>
+  </div>
+
+  <div class="chapter-grid">
+    <!-- Cards will be generated by JS -->
+  </div>
+
+  <div class="progress-bar-wrap">
+    <span class="progress-label">Progress Belajar</span>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <span class="progress-count" id="progressCount">0/35</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ PAGES ═══════════════════════════════════════════ -->
+<div id="pages-container">
+  <!-- All 35 pages injected by JS -->
+</div>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────────────────
+const chapters = [
+  {
+    id: 1, soal: "Soal No. 1", icon: "👑",
+    title: "Khalifah Umayyah Damaskus",
+    desc: "Tokoh-tokoh yang termasuk & bukan dari Umayyah Damaskus",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Daftar Khalifah Umayyah Damaskus (661–750 M)</div>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">Terdapat <strong style="color:var(--gold-light)">14 khalifah</strong> selama dinasti ini berdiri. Berikut urutan lengkapnya:</p>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">661–680 M</div><div class="tl-text"><strong>Muawiyah bin Abu Sufyan</strong> – Pendiri dinasti, memindahkan ibu kota ke Damaskus</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">680–683 M</div><div class="tl-text"><strong>Yazid bin Muawiyah</strong> – Peristiwa Karbala (wafatnya Husein)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">683–684 M</div><div class="tl-text"><strong>Muawiyah II</strong> – Sangat singkat, mengundurkan diri</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">684–685 M</div><div class="tl-text"><strong>Marwan bin Hakam</strong> – Dari cabang Marwaniyah</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">685–705 M</div><div class="tl-text"><strong>Abdul Malik bin Marwan</strong> – Mereformasi administrasi, mencetak mata uang dinar</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">705–715 M</div><div class="tl-text"><strong>Al-Walid I</strong> – Puncak ekspansi: Afrika Utara, Spanyol, Asia Tengah</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">715–717 M</div><div class="tl-text"><strong>Sulaiman bin Abdul Malik</strong></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">717–720 M</div><div class="tl-text"><strong>Umar bin Abdul Aziz (Umar II)</strong> – Khalifah paling adil Umayyah, reformasi besar-besaran</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">720–724 M</div><div class="tl-text"><strong>Yazid II</strong></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">724–743 M</div><div class="tl-text"><strong>Hisyam bin Abdul Malik</strong> – Ekspansi ke Perancis (Poitiers 732)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">743–744 M</div><div class="tl-text"><strong>Al-Walid II</strong></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">744 M</div><div class="tl-text"><strong>Yazid III</strong></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">744 M</div><div class="tl-text"><strong>Ibrahim bin Al-Walid</strong></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">744–750 M</div><div class="tl-text"><strong>Marwan II</strong> – Khalifah terakhir, jatuh ke Abbasiyah</div></div>
+        </div>
+      </div>
+      <div class="key-box">
+        <h4>🚨 Yang BUKAN Umayyah Damaskus</h4>
+        <p>Para Khulafaur Rasyidin (Abu Bakar, Umar, Utsman, Ali), khalifah Abbasiyah, dan Abdurrahman I (Umayyah Andalusia) adalah yang paling sering jadi "pengecoh" di soal pilihan ganda.</p>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Cara Hapal</div>
+        <p><strong>MYMM – AW – SU – YH – WAYI – MM</strong>: Muawiyah, Yazid, Muawiyah II, Marwan, Abdul Malik, Walid I, Sulaiman, Umar II, Yazid II, Hisyam, Walid II, Yazid III, Ibrahim, Marwan II</p>
+      </div>
+    `
+  },
+  {
+    id: 2, soal: "Soal No. 2", icon: "⚔️",
+    title: "Golongan Islam: Khawarij",
+    desc: "Karakteristik dan ciri-ciri kaum Khawarij",
+    color: "#C0522A",
+    content: `
+      <div class="section">
+        <div class="section-title">Apa itu Khawarij?</div>
+        <div class="info-row">
+          <div class="info-icon">📖</div>
+          <div>
+            <div class="info-label">Asal Usul</div>
+            <div class="info-text">Khawarij muncul setelah peristiwa <strong>Tahkim (Arbitrase)</strong> di Siffin (657 M). Mereka menolak tahkim antara Ali bin Abi Thalib dan Muawiyah, lalu memisahkan diri (خرج = keluar).</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Karakteristik Khawarij</div>
+        <ul class="list-clean">
+          <li>Mengkafirkan pelaku dosa besar (termasuk khalifah yang dianggap keliru)</li>
+          <li>Menolak tahkim (arbitrase) — menyebut "La hukma illa lillah" (tidak ada hukum selain milik Allah)</li>
+          <li>Bersikap ekstrem dan radikalisme dalam beragama</li>
+          <li>Menghalalkan darah Muslim yang berbeda pendapat</li>
+          <li>Pemimpin boleh dari suku siapa saja, bukan hanya Quraisy</li>
+          <li>Sangat ketat dalam ibadah dan membaca Al-Qur'an</li>
+        </ul>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col">
+          <h4>🟢 Syiah</h4>
+          <ul class="list-clean">
+            <li>Imamah hanya untuk keturunan Ali</li>
+            <li>Menganggap Ali sebagai yang berhak jadi khalifah pertama</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h4>🔵 Murjiah</h4>
+          <ul class="list-clean">
+            <li>Pelaku dosa besar tetap mukmin</li>
+            <li>Urusan hukum diserahkan kepada Allah</li>
+          </ul>
+        </div>
+      </div>
+      <div class="key-box">
+        <h4>🎯 Poin Utama untuk Soal</h4>
+        <p>Karakteristik paling khas Khawarij: <strong>mengkafirkan Muslim lain + menghalalkan darah mereka + menolak tahkim</strong>. Ini yang biasa ditanyakan di soal C2.</p>
+      </div>
+    `
+  },
+  {
+    id: 3, soal: "Soal No. 3", icon: "🕊️",
+    title: "Amul Jama'ah",
+    desc: "Peristiwa penyatuan umat Islam (Tahun Persatuan)",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Apa itu Amul Jama'ah?</div>
+        <div class="info-row">
+          <div class="info-icon">📅</div>
+          <div>
+            <div class="info-label">Tahun</div>
+            <div class="info-text"><strong>41 Hijriah (661 M)</strong> — disebut "عام الجماعة" (Tahun Persatuan)</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">⚡</div>
+          <div>
+            <div class="info-label">Peristiwa</div>
+            <div class="info-text">Hasan bin Ali menyerahkan kekuasaan kepada Muawiyah bin Abu Sufyan, mengakhiri perpecahan pasca-kematian Ali bin Abi Thalib.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Kronologi Singkat</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">656 M</div><div class="tl-text">Ali bin Abi Thalib menjadi khalifah ke-4 → konflik dengan Muawiyah (Gubernur Syam)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">657 M</div><div class="tl-text">Perang Siffin → Tahkim (Arbitrase) → lahirnya Khawarij</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">661 M</div><div class="tl-text">Ali wafat (dibunuh oleh Ibn Muljam, seorang Khawarij)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">661 M</div><div class="tl-text"><strong>Hasan bin Ali menyerahkan kekuasaan → AMUL JAMA'AH</strong></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">661 M</div><div class="tl-text">Muawiyah menjadi khalifah tunggal → Dinasti Umayyah resmi berdiri</div></div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h4>Makna Amul Jama'ah</h4>
+        <p>Peristiwa ini mengakhiri perang saudara pertama dalam Islam (Fitnah Kubra) dan menjadi awal berdirinya sistem <strong>monarki herediter (kerajaan turun-temurun)</strong> dalam Islam.</p>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Ingat!</div>
+        <p>Amul Jama'ah = Tahun Persatuan = 41 H / 661 M = Hasan serahkan kekuasaan ke Muawiyah = Umayyah berdiri resmi.</p>
+      </div>
+    `
+  },
+  {
+    id: 4, soal: "Soal No. 4", icon: "⚖️",
+    title: "Lembaga An-Nidhamul Qadha'i",
+    desc: "Sistem peradilan dalam Daulah Umayyah",
+    color: "#5A3472",
+    content: `
+      <div class="section">
+        <div class="section-title">Pengertian</div>
+        <div class="highlight-box">
+          <h4>An-Nidhamul Qadha'i (النظام القضائي)</h4>
+          <p>Adalah <strong>sistem peradilan / lembaga kehakiman</strong> yang dibentuk pada masa Daulah Umayyah untuk mengatur tata cara pengadilan dan penegakan hukum Islam secara sistematis.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Struktur Lembaga Peradilan Umayyah</div>
+        <ul class="list-clean">
+          <li><strong>Qadhi (Hakim)</strong> – Memutuskan perkara hukum berdasarkan syariat Islam</li>
+          <li><strong>Shahib al-Mazhalim</strong> – Pengadilan banding untuk kezaliman penguasa</li>
+          <li><strong>Al-Hisbah</strong> – Lembaga pengawas moral dan pasar (seperti ombudsman)</li>
+          <li><strong>Shahib al-Syurthah</strong> – Kepala kepolisian</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">Perkembangan Penting</div>
+        <ul class="list-clean">
+          <li>Qadhi pertama kali dipisahkan dari jabatan gubernur (memiliki independensi)</li>
+          <li>Mulai muncul pengkhususan jabatan qadhi untuk berbagai bidang</li>
+          <li>Keputusan pengadilan mulai dicatat secara tertulis</li>
+          <li>Berkembang pesat pada masa Umar bin Abdul Aziz</li>
+        </ul>
+      </div>
+      <div class="key-box purple">
+        <h4>🎯 Yang Ditanya di Soal</h4>
+        <p>Soal meminta <strong>penjelasan tentang lembaga An-Nidhamul Qadha'i</strong> (C2). Jawaban kunci: ini adalah <em>lembaga peradilan/kehakiman</em> yang mengatur sistem pengadilan dalam Daulah Umayyah.</p>
+      </div>
+    `
+  },
+  {
+    id: 5, soal: "Soal No. 5", icon: "🛡️",
+    title: "Pasukan Pengawal Khalifah",
+    desc: "Pembentukan Haras / pasukan keamanan negara Umayyah",
+    color: "#C0522A",
+    content: `
+      <div class="section">
+        <div class="section-title">Lembaga Militer Umayyah</div>
+        <div class="info-row">
+          <div class="info-icon">🪖</div>
+          <div>
+            <div class="info-label">Haras (الحراس)</div>
+            <div class="info-text">Pasukan pengawal pribadi khalifah. Bertanggung jawab langsung atas keamanan dan perlindungan khalifah 24 jam.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏰</div>
+          <div>
+            <div class="info-label">Syurthah (الشرطة)</div>
+            <div class="info-text">Pasukan kepolisian / penegak ketertiban umum di wilayah kekhalifahan.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">⚔️</div>
+          <div>
+            <div class="info-label">Jund (الجند)</div>
+            <div class="info-text">Pasukan militer reguler yang tersebar di wilayah-wilayah (jund = distrik militer).</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Mengapa Dibentuk?</div>
+        <ul class="list-clean">
+          <li>Ancaman dari gerakan Khawarij yang sering melakukan pembunuhan politik</li>
+          <li>Ancaman dari Syiah yang tidak mengakui legitimasi Umayyah</li>
+          <li>Perluasan wilayah membutuhkan keamanan terpusat</li>
+          <li>Melindungi khalifah dari pemberontakan internal</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h4>Konteks Sejarah</h4>
+        <p>Pembentukan pasukan pengawal ini dilatarbelakangi oleh <strong>terbunuhnya Ali bin Abi Thalib</strong> (oleh Khawarij) dan konflik-konflik internal yang mengancam keselamatan pemimpin negara.</p>
+      </div>
+    `
+  },
+  {
+    id: 6, soal: "Soal No. 6", icon: "🏛️",
+    title: "Sistem Umayyah vs Khulafaur Rasyidin",
+    desc: "Perbedaan sistem pemerintahan (C4 – Analisis)",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Perbandingan Sistem Pemerintahan</div>
+        <div class="compare-grid">
+          <div class="compare-col">
+            <h4>🟢 Khulafaur Rasyidin</h4>
+            <ul class="list-clean">
+              <li>Dipilih melalui musyawarah / syura</li>
+              <li>Tidak turun-temurun (demokratis)</li>
+              <li>Pemimpin bisa dikritik terbuka</li>
+              <li>Hidup sederhana, zuhud</li>
+              <li>Bersifat teokratis-demokratis</li>
+              <li>Ibu kota: Madinah</li>
+            </ul>
+          </div>
+          <div class="compare-col">
+            <h4>🔴 Umayyah</h4>
+            <ul class="list-clean">
+              <li>Turun-temurun (herediter/monarki)</li>
+              <li>Muawiyah menunjuk Yazid sebagai putra mahkota</li>
+              <li>Kritik terhadap khalifah dibatasi</li>
+              <li>Gaya hidup kerajaan/mewah</li>
+              <li>Bersifat monarki absolut</li>
+              <li>Ibu kota: Damaskus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="key-box">
+        <h4>⚡ Perbedaan Paling Mendasar</h4>
+        <p>Khulafaur Rasyidin: <strong>Syura (musyawarah)</strong> → Umayyah: <strong>Monarki Herediter</strong>. Ini perubahan paling revolusioner dalam sejarah politik Islam.</p>
+      </div>
+      <div class="section">
+        <div class="section-title">Kesamaan</div>
+        <ul class="list-clean">
+          <li>Sama-sama menerapkan syariat Islam sebagai dasar hukum</li>
+          <li>Ekspansi wilayah tetap berlanjut</li>
+          <li>Jihad dan dakwah tetap diprioritaskan</li>
+          <li>Zakat, pajak (kharaj, jizyah) tetap dipungut</li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    id: 7, soal: "Soal No. 7", icon: "👤",
+    title: "Gaya Kepemimpinan Khalifah",
+    desc: "Penilaian kepemimpinan khalifah-khalifah Umayyah",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Tokoh-Tokoh Berpengaruh</div>
+        <div class="person-card">
+          <div class="person-avatar">🌟</div>
+          <div>
+            <div class="person-name">Umar bin Abdul Aziz (717–720 M)</div>
+            <div class="person-role">Khalifah Paling Adil Umayyah</div>
+            <div class="person-desc">Menghapus jizyah bagi muallaf, mengembalikan tanah rakyat, menolak hidup mewah, menyamakan hak Arab–non Arab, menghentikan cacian terhadap Ali bin Abi Thalib.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">⚔️</div>
+          <div>
+            <div class="person-name">Al-Walid I (705–715 M)</div>
+            <div class="person-role">Khalifah Ekspansi Terbesar</div>
+            <div class="person-desc">Menaklukkan Spanyol (711 M), India (712 M), Asia Tengah (712 M). Membangun Masjid Umayyah di Damaskus dan Masjid Nabawi diperluas.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🏛️</div>
+          <div>
+            <div class="person-name">Abdul Malik bin Marwan (685–705 M)</div>
+            <div class="person-role">Reformator Administrasi</div>
+            <div class="person-desc">Mencetak mata uang dinar/dirham Islam, menjadikan Bahasa Arab sebagai bahasa resmi, membangun Kubah Al-Sakhrah di Yerusalem.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">👑</div>
+          <div>
+            <div class="person-name">Muawiyah bin Abu Sufyan (661–680 M)</div>
+            <div class="person-role">Pendiri Dinasti</div>
+            <div class="person-desc">Politisi ulung, memindahkan ibu kota ke Damaskus, membangun armada laut, menciptakan sistem administrasi yang efektif.</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 8, soal: "Soal No. 8", icon: "📜",
+    title: "Sastra Umayyah",
+    desc: "Tokoh-tokoh sastrawan pada era Daulah Umayyah",
+    color: "#5A3472",
+    content: `
+      <div class="section">
+        <div class="section-title">Tokoh Sastra Era Umayyah</div>
+        <div class="person-card">
+          <div class="person-avatar">✍️</div>
+          <div>
+            <div class="person-name">Al-Farazdaq</div>
+            <div class="person-role">Penyair Madah (Pujian)</div>
+            <div class="person-desc">Rival abadi Jarir, terkenal dengan qasidah pujian untuk khalifah dan bangsawan Arab.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">📝</div>
+          <div>
+            <div class="person-name">Jarir bin Atiyah</div>
+            <div class="person-role">Penyair Hija' (Satir)</div>
+            <div class="person-desc">Bersaing sengit dengan Al-Farazdaq, dikenal dengan syair sindiran tajam. Mendapat perhatian Khalifah Umar II.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">💕</div>
+          <div>
+            <div class="person-name">Umar bin Abi Rabi'ah</div>
+            <div class="person-role">Penyair Cinta (Ghazal)</div>
+            <div class="person-desc">Raja puisi cinta era Umayyah, berpusat di Mekah. Syairnya menggambarkan kisah percintaan dengan bahasa yang elegan.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🦅</div>
+          <div>
+            <div class="person-name">Al-Akhtal</div>
+            <div class="person-role">Penyair Istana (Non-Muslim)</div>
+            <div class="person-desc">Seorang Kristen yang menjadi penyair resmi istana Umayyah, terkenal dengan qasidah kepahlawanan.</div>
+          </div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h4>Jenis Syair Era Umayyah</h4>
+        <p><span class="pill pill-gold">Madah</span> = puji-pujian | <span class="pill pill-rust">Hija'</span> = sindiran/satir | <span class="pill pill-sky">Ghazal</span> = cinta | <span class="pill pill-green">Ratha'</span> = ratapan duka</p>
+      </div>
+    `
+  },
+  {
+    id: 9, soal: "Soal No. 9", icon: "📉",
+    title: "Faktor Keruntuhan Umayyah",
+    desc: "Analisis penyebab jatuhnya Dinasti Umayyah (C4)",
+    color: "#C0522A",
+    content: `
+      <div class="section">
+        <div class="section-title">Faktor Internal</div>
+        <ul class="list-clean">
+          <li><strong>Perebutan kekuasaan</strong> – Konflik antaranggota keluarga Umayyah</li>
+          <li><strong>Diskriminasi non-Arab (Mawali)</strong> – Muslim non-Arab diperlakukan sebagai warga kelas dua</li>
+          <li><strong>Gaya hidup mewah</strong> – Banyak khalifah akhir yang hedonistik</li>
+          <li><strong>Penindasan terhadap Syiah dan Khawarij</strong> – Menimbulkan pemberontakan terus-menerus</li>
+          <li><strong>Lemahnya khalifah akhir</strong> – Banyak pergantian khalifah dalam waktu singkat</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">Faktor Eksternal</div>
+        <ul class="list-clean">
+          <li><strong>Gerakan Abbasiyah</strong> – Propaganda dari Khurasan (Persia) yang terorganisir rapi</li>
+          <li><strong>Dukungan Mawali kepada Abbasiyah</strong> – Merasa lebih dihargai oleh Abbasiyah</li>
+          <li><strong>Pertempuran Zab (750 M)</strong> – Kekalahan Marwan II dari pasukan Abbasiyah</li>
+        </ul>
+      </div>
+      <div class="key-box">
+        <h4>🎯 Faktor Paling Kunci</h4>
+        <p>Penyebab utama keruntuhan: <strong>Diskriminasi terhadap Mawali (Muslim non-Arab)</strong> + <strong>Gerakan propaganda Abbasiyah dari Khurasan</strong> yang berhasil menggalang dukungan luas.</p>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Hapal dengan DGPL</div>
+        <p><strong>D</strong>iskriminasi Mawali · <strong>G</strong>aya hidup mewah · <strong>P</strong>erebutan kekuasaan · <strong>L</strong>emahnya khalifah akhir → + Gerakan Abbasiyah dari luar</p>
+      </div>
+    `
+  },
+  {
+    id: 10, soal: "Soal No. 10", icon: "♛",
+    title: "Sistem Monarki Umayyah",
+    desc: "Ciri-ciri sistem monarki dalam Daulah Umayyah (C4)",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Ciri-Ciri Sistem Monarki</div>
+        <ul class="list-clean">
+          <li><strong>Herediter (Turun-temurun)</strong> – Kekuasaan diwariskan kepada anak/keluarga</li>
+          <li><strong>Absolutisme</strong> – Khalifah memiliki kekuasaan penuh tanpa pembatasan yang jelas</li>
+          <li><strong>Gelar Kerajaan</strong> – Menggunakan gelar seperti "Amirul Mukminin" dengan nuansa kerajaan</li>
+          <li><strong>Istana Megah</strong> – Membangun istana-istana mewah (Qushur)</li>
+          <li><strong>Pengawal Pribadi</strong> – Haras sebagai pasukan pengamanan personal</li>
+          <li><strong>Penunjukan Putra Mahkota</strong> – Sejak Muawiyah menunjuk Yazid</li>
+        </ul>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col">
+          <h4>Monarki Umayyah</h4>
+          <ul class="list-clean">
+            <li>Dipengaruhi sistem Persia & Byzantium</li>
+            <li>Khalifah = simbol kekuasaan tertinggi</li>
+            <li>Tetap menggunakan hukum Islam</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h4>Monarki Murni</h4>
+          <ul class="list-clean">
+            <li>Berdasarkan tradisi kerajaan sepenuhnya</li>
+            <li>Raja = hukum itu sendiri</li>
+            <li>Tidak terikat syariat agama</li>
+          </ul>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h4>Awal Mula Monarki: Muawiyah & Yazid</h4>
+        <p>Ketika Muawiyah menunjuk putranya, <strong>Yazid bin Muawiyah</strong>, sebagai penerus pada tahun 676 M, inilah pertama kalinya Islam menerapkan sistem suksesi monarki — sesuatu yang ditentang keras oleh Husein bin Ali dan tokoh-tokoh lainnya.</p>
+      </div>
+    `
+  },
+  {
+    id: 11, soal: "Soal No. 11", icon: "🏰",
+    title: "Masuknya Islam ke Andalusia",
+    desc: "Awal dan proses masuknya Islam ke Spanyol",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Kronologi Penaklukan Andalusia</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">709 M</div><div class="tl-text"><strong>Musa bin Nushair</strong> (Gubernur Afrika Utara) mengirim Tharif bin Malluk untuk misi pengintaian ke Spanyol</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">711 M</div><div class="tl-text"><strong>Thariq bin Ziyad</strong> memimpin 7.000 pasukan menyeberangi Selat Gibraltar (Jabal Thariq)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">711 M</div><div class="tl-text"><strong>Pertempuran Wadi Bakkah (Guadalete)</strong> – Raja Roderick (Visigoth) dikalahkan</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">712 M</div><div class="tl-text"><strong>Musa bin Nushair</strong> menyusul dengan 18.000 pasukan, memperkuat penaklukan</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">718 M</div><div class="tl-text">Hampir seluruh Semenanjung Iberia (Spanyol-Portugal) dikuasai Islam</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">732 M</div><div class="tl-text">Ekspansi terhenti di <strong>Pertempuran Poitiers/Tours</strong> (Perancis) oleh Charles Martel</div></div>
+        </div>
+      </div>
+      <div class="key-box blue">
+        <h4>🎯 Yang Sering Ditanya</h4>
+        <p>Tokoh penakluk utama: <strong>Thariq bin Ziyad</strong> (panglima). Nama "Gibraltar" = dari "Jabal Thariq" (Gunung Thariq). Terjadi pada masa Khalifah <strong>Al-Walid I</strong>.</p>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Urutan Tokoh</div>
+        <p>Tharif (pengintai 709) → <strong>Thariq bin Ziyad</strong> (penakluk utama 711) → Musa bin Nushair (perkuat 712)</p>
+      </div>
+    `
+  },
+  {
+    id: 12, soal: "Soal No. 12", icon: "🔭",
+    title: "Ilmuwan Filsafat Andalusia",
+    desc: "Tokoh-tokoh ilmuwan di Andalusia/Spanyol Islam",
+    color: "#5A3472",
+    content: `
+      <div class="section">
+        <div class="section-title">Ilmuwan-Ilmuwan Besar Andalusia</div>
+        <div class="person-card">
+          <div class="person-avatar">📚</div>
+          <div>
+            <div class="person-name">Ibnu Rusyd (Averroes) 1126–1198 M</div>
+            <div class="person-role">Filsuf, Dokter, Ahli Fikih</div>
+            <div class="person-desc">Komentar terlengkap atas filsafat Aristoteles. Karya: <em>Bidayatul Mujtahid</em> (fikih), <em>Tahafut al-Tahafut</em> (filsafat), <em>Kulliyat fi al-Tibb</em> (kedokteran).</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🏥</div>
+          <div>
+            <div class="person-name">Ibnu Tufail (1105–1185 M)</div>
+            <div class="person-role">Filsuf & Dokter</div>
+            <div class="person-desc">Menulis novel filsafat <em>Hayy bin Yaqzhan</em> — kisah manusia yang tumbuh sendiri di pulau terpencil dan mencapai kebenaran melalui akal.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">⭐</div>
+          <div>
+            <div class="person-name">Al-Zahrawi (Abulcasis) 936–1013 M</div>
+            <div class="person-role">Bapak Ilmu Bedah Modern</div>
+            <div class="person-desc">Karya monumental: <em>Al-Tashrif</em> (30 jilid ensiklopedia kedokteran). Menciptakan 200+ alat bedah. Dipakai di Eropa hingga abad ke-17.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🌿</div>
+          <div>
+            <div class="person-name">Ibnu Bajjah (Avempace) w. 1139 M</div>
+            <div class="person-role">Filsuf & Ilmuwan</div>
+            <div class="person-desc">Meneliti gerak benda, dianggap mempengaruhi Galileo. Karya: <em>Tadbir al-Mutawahhid</em>.</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 13, soal: "Soal No. 13", icon: "🔬",
+    title: "Perkembangan Sains di Andalusia",
+    desc: "Kemajuan ilmu pengetahuan di Spanyol Islam (C3)",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Bidang-Bidang Ilmu yang Berkembang</div>
+        <div class="info-row">
+          <div class="info-icon">🔢</div>
+          <div>
+            <div class="info-label">Matematika & Astronomi</div>
+            <div class="info-text">Al-Majriti (w. 1007 M) – ahli matematika dan astronomi Andalusia pertama. Menterjemah tabel astronomi Al-Khawarizmi.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌱</div>
+          <div>
+            <div class="info-label">Pertanian & Botani</div>
+            <div class="info-text">Ibnu Bassal dan Ibnu Awwam menulis buku pertanian komprehensif. Memperkenalkan irigasi canggih, tanaman baru dari Timur ke Eropa.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">⚗️</div>
+          <div>
+            <div class="info-label">Kimia</div>
+            <div class="info-text">Jabir bin Hayyan (meski dari Baghdad) karyanya diterjemahkan dan berpengaruh besar di Andalusia. Kimia berkembang pesat.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏥</div>
+          <div>
+            <div class="info-label">Kedokteran</div>
+            <div class="info-text">Al-Zahrawi menciptakan alat bedah. Ibnu Rusyd menulis <em>Kulliyat</em> (ensiklopedia medis). Menjadi rujukan Eropa berabad-abad.</div>
+          </div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h4>Peran Andalusia sebagai Jembatan Peradaban</h4>
+        <p>Andalusia menjadi <strong>pintu masuk ilmu pengetahuan Islam ke Eropa</strong>. Melalui penerjemahan besar-besaran di Toledo (pusat terjemah abad 12), ribuan karya ilmuwan Muslim dialihkan ke bahasa Latin dan menjadi fondasi Renaisans Eropa.</p>
+      </div>
+    `
+  },
+  {
+    id: 14, soal: "Soal No. 14", icon: "🏗️",
+    title: "Kemajuan Fisik Andalusia",
+    desc: "Pembangunan infrastruktur dan arsitektur Islam di Spanyol",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Pembangunan Fisik Utama</div>
+        <div class="info-row">
+          <div class="info-icon">🕌</div>
+          <div>
+            <div class="info-label">Masjid Raya Cordoba (Mezquita)</div>
+            <div class="info-text">Dibangun mulai 785 M oleh Abdurrahman I, diperluas berkali-kali. Salah satu mahakarya arsitektur Islam terbesar. Memiliki 1.000+ kolom marmer.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏯</div>
+          <div>
+            <div class="info-label">Istana Al-Hambra (Granada)</div>
+            <div class="info-text">Dibangun abad 13-14 M oleh Dinasti Nasrid. Contoh tertinggi arsitektur Islam Barat. UNESCO: Situs Warisan Dunia.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏙️</div>
+          <div>
+            <div class="info-label">Kota Madinat Al-Zahra</div>
+            <div class="info-text">Dibangun oleh Abdurrahman III (936 M) sebagai kota istana di luar Cordoba. Memiliki 400 rumah, masjid, taman, dan istana megah.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📚</div>
+          <div>
+            <div class="info-label">Perpustakaan & Universitas</div>
+            <div class="info-text">Cordoba memiliki 70+ perpustakaan. Perpustakaan Khalifah berisi 400.000+ manuskrip. Universitas Islam Cordoba menarik pelajar dari seluruh Eropa.</div>
+          </div>
+        </div>
+      </div>
+      <div class="key-box green">
+        <h4>🏆 Cordoba: Kota Terbesar Eropa</h4>
+        <p>Pada puncaknya (abad 10 M), Cordoba adalah kota terbesar dan tercanggih di Eropa dengan populasi 500.000 jiwa, jalanan beraspal, penerangan, dan sistem drainase — sementara kota-kota Eropa masih berlumpur.</p>
+      </div>
+    `
+  },
+  {
+    id: 15, soal: "Soal No. 15", icon: "🕌",
+    title: "Puncak Arsitektur Islam",
+    desc: "Menentukan karya puncak arsitektur peradaban Islam",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Karya Arsitektur Islam Terbesar</div>
+        <div class="person-card">
+          <div class="person-avatar">🕌</div>
+          <div>
+            <div class="person-name">Masjid Umayyah – Damaskus (715 M)</div>
+            <div class="person-role">Dibangun Al-Walid I</div>
+            <div class="person-desc">Salah satu masjid tertua dan terindah. Mosaik Byzantium, menara pertama dalam sejarah Islam (minaret).</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🔵</div>
+          <div>
+            <div class="person-name">Kubah Al-Sakhrah – Yerusalem (691 M)</div>
+            <div class="person-role">Dibangun Abdul Malik bin Marwan</div>
+            <div class="person-desc">Bangunan Islam tertua yang masih berdiri. Kubah emas yang menjadi ikon Yerusalem. Mosaik byzantium memenuhi interior.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🏯</div>
+          <div>
+            <div class="person-name">Al-Hambra – Granada (abad 13-14)</div>
+            <div class="person-role">Puncak Arsitektur Andalusia</div>
+            <div class="person-desc">Kompleks istana dan benteng dengan taman air, ukiran kaligrafi, dan geometri Islam yang memukau. Puncak arsitektur Islam di Barat.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🟤</div>
+          <div>
+            <div class="person-name">Masjid Raya Cordoba (785 M)</div>
+            <div class="person-role">Mahakarya Umayyah Andalusia</div>
+            <div class="person-desc">1000+ kolom bergaris merah-putih (tarik dari bangunan Romawi-Visigoth). Mihrab dari marmer dan emas. Salah satu 10 masjid paling indah dunia.</div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Untuk Soal</div>
+        <p>Jika ditanya "puncak arsitektur Islam" → kemungkinan jawabannya <strong>Al-Hambra</strong> (untuk Andalusia) atau <strong>Masjid Umayyah Damaskus</strong> (untuk Umayyah Timur). Sesuaikan konteks soalnya.</p>
+      </div>
+    `
+  },
+  {
+    id: 16, soal: "Soal No. 16", icon: "📉",
+    title: "Kemunduran Andalusia",
+    desc: "Faktor-faktor kemunduran Islam di Spanyol (C4)",
+    color: "#C0522A",
+    content: `
+      <div class="section">
+        <div class="section-title">Faktor Internal</div>
+        <ul class="list-clean">
+          <li><strong>Perpecahan politik (Muluk al-Thawaif)</strong> – Terpecah menjadi 23+ kerajaan kecil (1031 M)</li>
+          <li><strong>Konflik antarbangsa</strong> – Arab vs Berber vs Slavia (Saqalibah)</li>
+          <li><strong>Kemewahan dan dekadensi moral</strong> – Penguasa sibuk dengan hiburan</li>
+          <li><strong>Ketergantungan pada tentara bayaran</strong></li>
+          <li><strong>Tidak ada suksesi yang jelas</strong></li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">Faktor Eksternal</div>
+        <ul class="list-clean">
+          <li><strong>Reconquista (Penaklukan Kembali)</strong> – Kerajaan Kristen Utara (Castilla, Aragon, Portugal) bersatu menyerang</li>
+          <li><strong>Jatuhnya Toledo</strong> (1085 M) – Kota penting jatuh ke tangan Alfonso VI dari Castilla</li>
+          <li><strong>Jatuhnya Granada</strong> (2 Januari 1492 M) – Kerajaan Islam terakhir jatuh ke Ferdinand & Isabella</li>
+          <li><strong>Inkuisisi Spanyol</strong> – Pemaksaan konversi atau pengusiran Muslim</li>
+        </ul>
+      </div>
+      <div class="key-box">
+        <h4>📅 Tanggal Penting</h4>
+        <p><strong>1031 M</strong>: Kekhalifahan Cordoba runtuh → Muluk al-Thawaif | <strong>1492 M</strong>: Granada jatuh → Islam berakhir di Spanyol setelah 780 tahun</p>
+      </div>
+    `
+  },
+  {
+    id: 17, soal: "Soal No. 17", icon: "🗺️",
+    title: "Tokoh Penaklukan Andalusia",
+    desc: "Mengidentifikasi tokoh-tokoh ekspansi Islam ke Spanyol",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Tokoh Utama Penaklukan</div>
+        <div class="person-card">
+          <div class="person-avatar">⚔️</div>
+          <div>
+            <div class="person-name">Thariq bin Ziyad</div>
+            <div class="person-role">Panglima Utama Penaklukan (711 M)</div>
+            <div class="person-desc">Memimpin 7.000 prajurit Berber menyeberangi selat. Membakar kapal untuk mencegah mundur. Ucapan terkenal: "Di belakang kita laut, di depan kita musuh." Gibraltar = Jabal Thariq.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🏴</div>
+          <div>
+            <div class="person-name">Musa bin Nushair</div>
+            <div class="person-role">Gubernur Afrika Utara, Perencana</div>
+            <div class="person-desc">Atasan Thariq. Ikut menyerang dengan 18.000 pasukan (712 M). Bersama Thariq berhasil menguasai hampir seluruh Semenanjung Iberia.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🔍</div>
+          <div>
+            <div class="person-name">Tharif bin Malluk</div>
+            <div class="person-role">Pengintai Pertama (709 M)</div>
+            <div class="person-desc">Melakukan misi pengintaian ke Spanyol dua tahun sebelum penaklukan resmi. Nama kota Tarifa (Spanyol) berasal dari namanya.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">👑</div>
+          <div>
+            <div class="person-name">Julian (Yulyan)</div>
+            <div class="person-role">Gubernur Kristen yang Mengundang Islam</div>
+            <div class="person-desc">Gubernur Ceuta yang tidak puas dengan Raja Roderick. Ia yang mengundang Thariq untuk menyerang Spanyol.</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 18, soal: "Soal No. 18", icon: "🦁",
+    title: "Abdurrahman Ad-Dakhil",
+    desc: "Peran 'Sang Elang Quraisy' dalam membangun Andalusia (C3)",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Profil Abdurrahman Ad-Dakhil</div>
+        <div class="info-row">
+          <div class="info-icon">📅</div>
+          <div>
+            <div class="info-label">Masa Pemerintahan</div>
+            <div class="info-text">756–788 M | Pendiri Emirat Cordoba (Umayyah di Andalusia)</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🦅</div>
+          <div>
+            <div class="info-label">Julukan</div>
+            <div class="info-text"><strong>Ad-Dakhil</strong> (Yang Masuk) dan <strong>Saqr Quraisy</strong> (Elang Quraisy) – dijuluki Napoleon of the Arabs oleh sejarawan Barat</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏃</div>
+          <div>
+            <div class="info-label">Latar Belakang</div>
+            <div class="info-text">Cucu Khalifah Hisyam. Lolos dari pembantaian Abbasiyah, melarikan diri ke Andalusia setelah dinasti Umayyah di Damaskus runtuh (750 M).</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Peran & Pencapaian</div>
+        <ul class="list-clean">
+          <li>Mendirikan <strong>Emirat Cordoba</strong> yang independen dari Abbasiyah (756 M)</li>
+          <li>Menyatukan wilayah Andalusia yang terpecah belah</li>
+          <li>Membangun <strong>Masjid Raya Cordoba</strong> (785 M) – mahakarya arsitektur</li>
+          <li>Mendatangkan tanaman baru dari Timur: delima, pisang, kapas</li>
+          <li>Mengembangkan pertanian dan irigasi</li>
+          <li>Menerapkan toleransi antaragama</li>
+        </ul>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Ingat!</div>
+        <p>Abdurrahman Ad-Dakhil = Umayyah Andalusia (bukan Umayyah Damaskus) = mendirikan Emirat Cordoba = membangun Masjid Cordoba = "Elang Quraisy"</p>
+      </div>
+    `
+  },
+  {
+    id: 19, soal: "Soal No. 19", icon: "⛵",
+    title: "Pemimpin Ekspedisi Andalusia",
+    desc: "Mengidentifikasi pemimpin ekspedisi penaklukan",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Tiga Fase Ekspedisi</div>
+        <div class="highlight-box">
+          <h4>Fase 1 – Pengintaian (709 M)</h4>
+          <p>Pemimpin: <strong>Tharif bin Malluk</strong><br>500 infanteri + 100 kavaleri. Menjelajahi pantai selatan Spanyol. Kota Tarifa dinamai atas namanya.</p>
+        </div>
+        <div class="highlight-box">
+          <h4>Fase 2 – Penaklukan Utama (711 M)</h4>
+          <p>Pemimpin: <strong>Thariq bin Ziyad</strong><br>7.000 pasukan menyeberangi selat. Mengalahkan Raja Roderick di Pertempuran Guadalete. Membuka jalan penaklukan seluruh Iberia.</p>
+        </div>
+        <div class="highlight-box">
+          <h4>Fase 3 – Penguatan (712 M)</h4>
+          <p>Pemimpin: <strong>Musa bin Nushair</strong><br>18.000 pasukan bergabung. Menaklukkan kota-kota besar yang belum dikuasai Thariq.</p>
+        </div>
+      </div>
+      <div class="key-box blue">
+        <h4>🎯 Konteks Khalifah</h4>
+        <p>Semua ini terjadi pada masa Khalifah <strong>Al-Walid I bin Abdul Malik</strong> (705–715 M), masa paling ekspansif Umayyah.</p>
+      </div>
+    `
+  },
+  {
+    id: 20, soal: "Soal No. 20", icon: "📖",
+    title: "Karya Ibnu Rusyd",
+    desc: "Mengidentifikasi karya-karya Ibnu Rusyd (Averroes) di bidang fikih",
+    color: "#5A3472",
+    content: `
+      <div class="section">
+        <div class="section-title">Biografi Singkat Ibnu Rusyd</div>
+        <div class="info-row">
+          <div class="info-icon">👤</div>
+          <div>
+            <div class="info-label">Nama Lengkap</div>
+            <div class="info-text">Abu Al-Walid Muhammad bin Ahmad bin Rusyd | Lahir: Cordoba 1126 M | Wafat: Marrakesh 1198 M</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🎓</div>
+          <div>
+            <div class="info-label">Keahlian</div>
+            <div class="info-text">Filsafat, Fikih (Maliki), Kedokteran, Astronomi, Fisika</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Karya-Karya Utama</div>
+        <ul class="list-clean">
+          <li><strong>Bidayatul Mujtahid wa Nihayatul Muqtashid</strong> – Ensiklopedia fikih perbandingan mazhab, karya fikih terpenting</li>
+          <li><strong>Tahafut al-Tahafut</strong> – Filsafat, merespons Al-Ghazali dalam Tahafut al-Falasifah</li>
+          <li><strong>Kulliyat fi al-Tibb</strong> – Ensiklopedia kedokteran 7 jilid</li>
+          <li><strong>Komentar atas Aristoteles</strong> – Diterjemahkan ke Latin, memengaruhi filsafat Eropa abad pertengahan</li>
+          <li><strong>Fashl al-Maqal</strong> – Hubungan antara filsafat dan syariat</li>
+        </ul>
+      </div>
+      <div class="key-box purple">
+        <h4>🎯 Soal Tentang Fikih</h4>
+        <p>Karya Ibnu Rusyd di bidang fikih: <strong>Bidayatul Mujtahid</strong> — kitab fikih perbandingan (muqaran) yang menjadi rujukan semua mazhab.</p>
+      </div>
+    `
+  },
+  {
+    id: 21, soal: "Soal No. 21", icon: "⭐",
+    title: "Masa Kejayaan Abbasiyah",
+    desc: "Menentukan periode puncak kejayaan Daulah Abbasiyah",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Periodisasi Abbasiyah (750–1258 M)</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">750–847 M</div><div class="tl-text"><strong>Periode I – Masa Kejayaan</strong>: Al-Mansur, Harun Al-Rasyid, Al-Ma'mun, Al-Mu'tashim. Ini masa TERBAIK Abbasiyah.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">847–945 M</div><div class="tl-text"><strong>Periode II – Pengaruh Turki</strong>: Khalifah dikuasai oleh pemimpin militer Turki</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">945–1055 M</div><div class="tl-text"><strong>Periode III – Dominasi Buwaihi</strong>: Dinasti Syiah dari Persia mengendalikan Baghdad</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1055–1258 M</div><div class="tl-text"><strong>Periode IV – Dominasi Seljuk</strong>: Sultan Seljuk pegang kekuasaan nyata</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1258 M</div><div class="tl-text"><strong>RUNTUH</strong>: Baghdad dihancurkan Mongol (Hulagu Khan)</div></div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h4>🌟 Khalifah-Khalifah Era Keemasan</h4>
+        <p><strong>Harun Al-Rasyid (786–809 M)</strong> – Puncak kejayaan, zaman 1001 Malam<br><strong>Al-Ma'mun (813–833 M)</strong> – Mendirikan Baitul Hikmah, penerjemahan besar-besaran<br><strong>Al-Mansur (754–775 M)</strong> – Mendirikan Baghdad sebagai ibu kota</p>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Jawaban Soal</div>
+        <p>Masa kejayaan Abbasiyah = <strong>Periode I (750–847 M)</strong> / era Harun Al-Rasyid dan Al-Ma'mun.</p>
+      </div>
+    `
+  },
+  {
+    id: 22, soal: "Soal No. 22", icon: "🏙️",
+    title: "Pemindahan Ibu Kota Abbasiyah",
+    desc: "Analisis mengapa ibu kota dipindahkan ke Baghdad (C3)",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Perpindahan Ibu Kota</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">750 M</div><div class="tl-text">Abbasiyah menggantikan Umayyah. Ibu kota awal: <strong>Kufah</strong> (Irak)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">762 M</div><div class="tl-text">Khalifah <strong>Al-Mansur</strong> mendirikan kota baru: <strong>Baghdad (Madinat Al-Salam)</strong> di tepi Sungai Tigris</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">762–766 M</div><div class="tl-text">Pembangunan Baghdad: kota lingkaran sempurna (Round City) dengan 4 gerbang menuju 4 penjuru dunia</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">836 M</div><div class="tl-text">Al-Mu'tashim memindahkan ibu kota ke <strong>Samarra</strong> (untuk menjauhkan pasukan Turki dari rakyat)</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">892 M</div><div class="tl-text">Al-Mu'tadid memindahkan kembali ke <strong>Baghdad</strong></div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Mengapa Baghdad?</div>
+        <ul class="list-clean">
+          <li>Letak strategis di persimpangan jalur perdagangan dunia</li>
+          <li>Di antara dua sungai besar (Tigris & Eufrat) – subur dan mudah dipertahankan</li>
+          <li>Jauh dari pengaruh Umayyah dan Arab murni (Damaskus)</li>
+          <li>Dekat dengan wilayah Persia – pendukung utama Abbasiyah</li>
+          <li>Iklim yang lebih baik untuk pertanian</li>
+        </ul>
+      </div>
+      <div class="key-box blue">
+        <h4>🎯 Yang Sering Ditanya</h4>
+        <p>Siapa yang mendirikan Baghdad? → <strong>Al-Mansur (762 M)</strong>. Mengapa? → Strategis, jauh dari Umayyah, dekat Persia (pendukung Abbasiyah).</p>
+      </div>
+    `
+  },
+  {
+    id: 23, soal: "Soal No. 23", icon: "🔥",
+    title: "Momentum Revolusi Abbasiyah",
+    desc: "Analisis titik balik sejarah revolusi Abbasiyah (C4)",
+    color: "#C0522A",
+    content: `
+      <div class="section">
+        <div class="section-title">Latar Belakang Revolusi</div>
+        <ul class="list-clean">
+          <li>Klan Abbasiyah adalah keturunan <strong>Al-Abbas bin Abdul Muthalib</strong> (paman Nabi)</li>
+          <li>Menyebarkan propaganda bahwa Umayyah tidak sah karena diskriminasi terhadap non-Arab</li>
+          <li>Basis gerakan: <strong>Khurasan (Persia Timur)</strong> — mayoritas Mawali yang tertindas</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">Momentum & Strategi</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">718 M</div><div class="tl-text">Muhammad bin Ali (cicit Al-Abbas) mulai menyebarkan dakwah rahasia dari Khurasan</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">743–744 M</div><div class="tl-text">Krisis Umayyah: 4 khalifah berganti hanya dalam 2 tahun → momentum dimanfaatkan</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">747 M</div><div class="tl-text"><strong>Abu Muslim Al-Khurasani</strong> mengangkat panji revolusi hitam di Khurasan secara terbuka</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">750 M</div><div class="tl-text"><strong>Pertempuran Zab Besar</strong> – Pasukan Abbasiyah mengalahkan Marwan II. Umayyah runtuh resmi.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">750 M</div><div class="tl-text">Abdullah bin Muhammad (Abul Abbas Al-Saffah) menjadi khalifah Abbasiyah pertama</div></div>
+        </div>
+      </div>
+      <div class="key-box">
+        <h4>🎯 Momentum Kunci Revolusi</h4>
+        <p>Momentum terpenting: <strong>Krisis kepemimpinan Umayyah (743–744 M)</strong> + <strong>Abu Muslim mengangkat panji revolusi di Khurasan (747 M)</strong>. Inilah titik balik sejarah.</p>
+      </div>
+    `
+  },
+  {
+    id: 24, soal: "Soal No. 24", icon: "💎",
+    title: "Karya Al-Ghazali",
+    desc: "Mengidentifikasi karya-karya Imam Al-Ghazali",
+    color: "#5A3472",
+    content: `
+      <div class="section">
+        <div class="section-title">Profil Al-Ghazali</div>
+        <div class="info-row">
+          <div class="info-icon">👤</div>
+          <div>
+            <div class="info-label">Nama Lengkap</div>
+            <div class="info-text">Abu Hamid Muhammad bin Muhammad Al-Ghazali | Lahir: Tus, Persia 1058 M | Wafat: 1111 M</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🎓</div>
+          <div>
+            <div class="info-label">Julukan</div>
+            <div class="info-text"><strong>Hujjatul Islam</strong> (Argumen Islam) – gelar kehormatan tertinggi dalam tradisi Islam</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Karya-Karya Utama</div>
+        <ul class="list-clean">
+          <li>🌟 <strong>Ihya Ulumuddin</strong> – "Menghidupkan Ilmu-Ilmu Agama", karya terbesar, 4 jilid ensiklopedia tasawuf-fikih</li>
+          <li>⚡ <strong>Tahafut al-Falasifah</strong> – "Kerancuan Para Filosof", mengkritik Ibnu Sina & Al-Farabi</li>
+          <li>📚 <strong>Al-Munqidz min al-Dhalal</strong> – Otobiografi spiritual, perjalanan intelektualnya</li>
+          <li>🔑 <strong>Maqashid al-Falasifah</strong> – Merangkum filsafat para filosof</li>
+          <li>💎 <strong>Minhajul Abidin</strong> – Panduan mendekatkan diri kepada Allah</li>
+          <li>📖 <strong>Al-Iqtishad fil I'tiqad</strong> – Teologi/akidah</li>
+        </ul>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Karya Paling Terkenal</div>
+        <p><strong>Ihya Ulumuddin</strong> = karya terbesar Al-Ghazali. Jika soal tanya karya Al-Ghazali → Ihya Ulumuddin adalah jawaban paling kuat.</p>
+      </div>
+    `
+  },
+  {
+    id: 25, soal: "Soal No. 25", icon: "📚",
+    title: "Baitul Hikmah",
+    desc: "Lembaga ilmu pengetahuan kebanggaan Abbasiyah",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Apa itu Baitul Hikmah?</div>
+        <div class="highlight-box">
+          <h4>بيت الحكمة – "Rumah Kebijaksanaan"</h4>
+          <p>Lembaga akademik terbesar dunia pada abad ke-8 hingga 13, didirikan di Baghdad. Berfungsi sebagai perpustakaan, pusat penerjemahan, laboratorium riset, dan universitas sekaligus.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Sejarah & Fungsi</div>
+        <div class="info-row">
+          <div class="info-icon">👑</div>
+          <div>
+            <div class="info-label">Pendiri</div>
+            <div class="info-text">Dimulai Harun Al-Rasyid, dikembangkan besar-besaran oleh <strong>Al-Ma'mun (813–833 M)</strong></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📖</div>
+          <div>
+            <div class="info-label">Fungsi Utama</div>
+            <div class="info-text">Menerjemahkan karya Yunani, Persia, India ke Arab | Pusat penelitian | Observatorium astronomi | Perpustakaan besar</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌍</div>
+          <div>
+            <div class="info-label">Dampak</div>
+            <div class="info-text">Memicu Zaman Keemasan Islam. Ilmu-ilmu yang diterjemahkan berkembang pesat dan kemudian ditransfer ke Eropa melalui Andalusia.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Ilmuwan di Baitul Hikmah</div>
+        <ul class="list-clean">
+          <li><strong>Al-Khawarizmi</strong> – Aljabar (algebra), angka nol, logaritma</li>
+          <li><strong>Hunain bin Ishaq</strong> – Kepala penerjemah, menerjemah Galen & Hippocrates</li>
+          <li><strong>Al-Kindi</strong> – Filsuf Arab pertama</li>
+          <li><strong>Al-Farghani</strong> – Astronomi, Dante Alighieri pelajari karyanya</li>
+        </ul>
+      </div>
+      <div class="key-box green">
+        <h4>💥 Akhir Baitul Hikmah</h4>
+        <p>1258 M – Hulagu Khan (Mongol) menghancurkan Baghdad. Ribuan manuskrip dibuang ke Sungai Tigris hingga airnya "berwarna hitam tinta". Baitul Hikmah ikut musnah.</p>
+      </div>
+    `
+  },
+  {
+    id: 26, soal: "Soal No. 26", icon: "🏥",
+    title: "Karya Ibnu Sina",
+    desc: "Mengidentifikasi karya-karya Bapak Kedokteran Dunia",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Profil Ibnu Sina</div>
+        <div class="info-row">
+          <div class="info-icon">👤</div>
+          <div>
+            <div class="info-label">Nama Lengkap & Julukan</div>
+            <div class="info-text">Abu Ali Al-Husain bin Abdullah bin Sina | <strong>Avicenna</strong> (Barat) | <strong>Syaikhur Rais</strong> (Pemimpin Para Ilmuwan)</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📅</div>
+          <div>
+            <div class="info-label">Hidup</div>
+            <div class="info-text">980–1037 M | Lahir di Bukhara (Uzbekistan sekarang)</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Karya-Karya Utama</div>
+        <ul class="list-clean">
+          <li>🌟 <strong>Al-Qanun fit-Tibb</strong> – "Ensiklopedia Kedokteran", 5 jilid, menjadi buku teks kedokteran Eropa selama 600 tahun (12–17 M)</li>
+          <li>📚 <strong>Kitab Al-Shifa</strong> – "Buku Penyembuhan", ensiklopedia filsafat dan sains 18 jilid</li>
+          <li>🔬 <strong>Kitab Al-Najat</strong> – Ringkasan Al-Shifa</li>
+          <li>💊 <strong>Al-Adwiyah Al-Qalbiyyah</strong> – Kedokteran kardiovaskular</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h4>Kontribusi Revolusioner Ibnu Sina</h4>
+        <p>Pertama kali menjelaskan penularan penyakit melalui udara dan air (sebelum teori kuman ditemukan). Mengklasifikasikan 760 jenis obat. Menjelaskan fungsi otak, jantung, dan sistem saraf.</p>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Hapal!</div>
+        <p><strong>Ibnu Sina = Al-Qanun fit-Tibb</strong>. Ini karya kedokteran terpenting. Dipakai di Eropa 600 tahun! (Ibnu Rusyd = Kulliyat | Al-Zahrawi = Al-Tashrif)</p>
+      </div>
+    `
+  },
+  {
+    id: 27, soal: "Soal No. 27", icon: "🌳",
+    title: "Asal-Usul Dinasti Abbasiyah",
+    desc: "Menjelaskan silsilah dan asal Abbasiyah",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Silsilah Abbasiyah</div>
+        <div class="highlight-box">
+          <h4>Dari Siapa Abbasiyah Berasal?</h4>
+          <p>Dinasti Abbasiyah dinisbahkan kepada <strong>Al-Abbas bin Abdul Muthalib</strong> — paman Nabi Muhammad SAW dari jalur ayah (Bani Hasyim, Quraisy).</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Silsilah</div><div class="tl-text">Abdul Muthalib → Al-Abbas → Abdullah bin Abbas → Ali bin Abdullah → Muhammad bin Ali → Ibrahim Al-Imam</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">718 M</div><div class="tl-text"><strong>Muhammad bin Ali</strong> mulai menyebarkan gerakan dakwah rahasia dari Khurasan</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">747 M</div><div class="tl-text"><strong>Abu Muslim Al-Khurasani</strong> mengangkat bendera revolusi Abbasiyah</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">750 M</div><div class="tl-text"><strong>Abul Abbas Al-Saffah</strong> menjadi khalifah pertama Abbasiyah</div></div>
+        </div>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col">
+          <h4>Umayyah</h4>
+          <ul class="list-clean">
+            <li>Dari Muawiyah bin Abi Sufyan</li>
+            <li>Cabang Bani Umayyah (Quraisy)</li>
+            <li>Pusat: Damaskus (Syam/Arab)</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h4>Abbasiyah</h4>
+          <ul class="list-clean">
+            <li>Dari Al-Abbas bin Abdul Muthalib</li>
+            <li>Cabang Bani Hasyim (Quraisy)</li>
+            <li>Pusat: Baghdad (Irak/Persia)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Kunci Jawaban</div>
+        <p>Abbasiyah berasal dari <strong>Al-Abbas bin Abdul Muthalib</strong> = paman Nabi = Bani Hasyim = masih keluarga Nabi.</p>
+      </div>
+    `
+  },
+  {
+    id: 28, soal: "Soal No. 28", icon: "⚖️",
+    title: "Tokoh Mazhab Fikih",
+    desc: "Menganalisis tokoh-tokoh pendiri mazhab fikih (C4)",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Empat Imam Mazhab Besar</div>
+        <div class="person-card">
+          <div class="person-avatar">1️⃣</div>
+          <div>
+            <div class="person-name">Imam Abu Hanifah (699–767 M)</div>
+            <div class="person-role">Mazhab Hanafi – Pendekatan Rasional (Ra'yu)</div>
+            <div class="person-desc">Lahir di Kufah, Irak. Mengutamakan akal (qiyas) dalam berijtihad. Mazhab terbesar saat ini (30%+ Muslim dunia: Turki, Pakistan, Asia Tengah).</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">2️⃣</div>
+          <div>
+            <div class="person-name">Imam Malik bin Anas (711–795 M)</div>
+            <div class="person-role">Mazhab Maliki – Hadits & Amal Madinah</div>
+            <div class="person-desc">Lahir & wafat di Madinah. Karya utama: <em>Al-Muwatha</em> (kumpulan hadits). Mengutamakan praktek ahlul Madinah. Dominan di Afrika Utara & Barat.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">3️⃣</div>
+          <div>
+            <div class="person-name">Imam Al-Syafi'i (767–820 M)</div>
+            <div class="person-role">Mazhab Syafi'i – Ushul Fikih</div>
+            <div class="person-desc">Lahir di Gaza, wafat di Mesir. Pendiri ilmu Ushul Fikih (metodologi hukum Islam). Karya: <em>Al-Umm, Al-Risalah</em>. Dominan di Asia Tenggara (Indonesia!).</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">4️⃣</div>
+          <div>
+            <div class="person-name">Imam Ahmad bin Hanbal (780–855 M)</div>
+            <div class="person-role">Mazhab Hanbali – Hadits Ketat</div>
+            <div class="person-desc">Lahir di Baghdad. Sangat ketat dalam berpegang pada hadits. Karya: <em>Musnad Ahmad</em> (27.647 hadits). Dominan di Arab Saudi.</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 29, soal: "Soal No. 29", icon: "♟️",
+    title: "Strategi Politik Muawiyah",
+    desc: "Analisis strategi politik Muawiyah bin Abu Sufyan (C4)",
+    color: "#C0522A",
+    content: `
+      <div class="section">
+        <div class="section-title">Strategi-Strategi Muawiyah</div>
+        <div class="info-row">
+          <div class="info-icon">🤝</div>
+          <div>
+            <div class="info-label">1. Diplomasi & Negosiasi</div>
+            <div class="info-text">Menggunakan dialog dan perjanjian daripada langsung berperang. Perjanjian dengan Hasan bin Ali dikenal sebagai strategi diplomatik terbaik.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">💰</div>
+          <div>
+            <div class="info-label">2. Politik Uang (Hibah)</div>
+            <div class="info-text">Memberi hadiah, uang, dan jabatan kepada tokoh-tokoh berpengaruh untuk mendapatkan loyalitas mereka.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">👑</div>
+          <div>
+            <div class="info-label">3. Sistem Monarki Herediter</div>
+            <div class="info-text">Menetapkan Yazid sebagai putra mahkota (676 M) – pertama dalam sejarah Islam – menjamin keberlangsungan dinasti.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">⚔️</div>
+          <div>
+            <div class="info-label">4. Kekuatan Militer</div>
+            <div class="info-text">Membangun armada laut pertama Islam. Pasukan disiplin tinggi. Menguasai Cyprus dan ekspansi ke Afrika Utara.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏛️</div>
+          <div>
+            <div class="info-label">5. Administrasi Efektif</div>
+            <div class="info-text">Mengadopsi sistem administrasi Byzantium dan Persia, menjadikan pemerintahan lebih efisien.</div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Kunci Analisis</div>
+        <p>Muawiyah lebih dikenal sebagai <strong>politisi ulung</strong> daripada pahlawan perang. Kekuatannya pada diplomasi, pemberian hadiah, dan penciptaan sistem monarki — bukan kekuatan militer semata.</p>
+      </div>
+    `
+  },
+  {
+    id: 30, soal: "Soal No. 30", icon: "💡",
+    title: "Solusi Kemunduran Islam",
+    desc: "Evaluasi solusi untuk mengatasi kemunduran peradaban Islam (C5)",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Faktor Kemunduran & Solusinya</div>
+        <div class="highlight-box">
+          <h4>🔴 Masalah 1: Perpecahan Politik</h4>
+          <p><strong>Solusi:</strong> Membangun persatuan umat Islam di atas dasar aqidah, bukan suku/ras. Menerapkan musyawarah (syura) dalam pengambilan keputusan.</p>
+        </div>
+        <div class="highlight-box">
+          <h4>🔴 Masalah 2: Kemunduran Ilmu Pengetahuan</h4>
+          <p><strong>Solusi:</strong> Menghidupkan kembali semangat iqra (membaca/meneliti). Mendirikan lembaga pendidikan Islam modern. Menggabungkan ilmu agama dan sains.</p>
+        </div>
+        <div class="highlight-box">
+          <h4>🔴 Masalah 3: Dekadensi Moral Penguasa</h4>
+          <p><strong>Solusi:</strong> Menerapkan akuntabilitas (muhasabah) dalam pemerintahan. Pemimpin harus tunduk pada hukum Allah, bukan sebaliknya. Umar II sebagai teladan.</p>
+        </div>
+        <div class="highlight-box">
+          <h4>🔴 Masalah 4: Diskriminasi</h4>
+          <p><strong>Solusi:</strong> Menerapkan prinsip kesetaraan Islam – "Tidak ada kelebihan Arab atas non-Arab kecuali ketaqwaan." Merangkul semua kelompok.</p>
+        </div>
+      </div>
+      <div class="key-box green">
+        <h4>🎯 Ibrah (Pelajaran) untuk Kehidupan Kini</h4>
+        <p>Persatuan + Ilmu + Akhlak = Kunci Kebangkitan. Ini yang disimpulkan dari sejarah kemunduran Umayyah dan Abbasiyah.</p>
+      </div>
+    `
+  },
+  {
+    id: 31, soal: "Soal No. 31", icon: "🌅",
+    title: "Dampak Masuknya Islam ke Andalusia",
+    desc: "Analisis dampak positif Islam bagi Eropa melalui Andalusia (C4)",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Dampak Peradaban Islam di Andalusia</div>
+        <div class="info-row">
+          <div class="info-icon">📚</div>
+          <div>
+            <div class="info-label">Ilmu Pengetahuan</div>
+            <div class="info-text">Menjadi jembatan ilmu Yunani-Persia ke Eropa melalui penerjemahan di Toledo. Aljabar, angka Arab, optik, kedokteran masuk ke Eropa.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌿</div>
+          <div>
+            <div class="info-label">Pertanian</div>
+            <div class="info-text">Sistem irigasi canggih, tanaman baru (tebu, kapas, jeruk, nasi), teknik pertanian modern menyebar ke seluruh Eropa.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏛️</div>
+          <div>
+            <div class="info-label">Arsitektur</div>
+            <div class="info-text">Gaya arsitektur Moorish (lengkungan tapal kuda, geometri islami, ukiran arabesque) memengaruhi arsitektur Eropa.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">💬</div>
+          <div>
+            <div class="info-label">Bahasa</div>
+            <div class="info-text">Ratusan kata Arab masuk ke Spanyol dan Portugal: naranja (jeruk), azúcar (gula), algebra, algorithm, alcohol, alkali.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🤝</div>
+          <div>
+            <div class="info-label">Toleransi</div>
+            <div class="info-text">Masa Convivencia – Muslim, Kristen, Yahudi hidup berdampingan dan berkolaborasi dalam ilmu pengetahuan di Cordoba.</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 32, soal: "Soal No. 32", icon: "🔄",
+    title: "Umayyah Damaskus vs Andalusia",
+    desc: "Perbandingan dua cabang dinasti Umayyah (C4)",
+    color: "#C9A84C",
+    content: `
+      <div class="section">
+        <div class="section-title">Perbandingan Lengkap</div>
+        <div class="compare-grid">
+          <div class="compare-col">
+            <h4>Umayyah Damaskus</h4>
+            <ul class="list-clean">
+              <li>661–750 M (89 tahun)</li>
+              <li>Pusat: Damaskus, Syam</li>
+              <li>14 khalifah</li>
+              <li>Ekspansi besar ke 3 benua</li>
+              <li>Runtuh oleh Abbasiyah</li>
+              <li>Bahasa resmi: Arab</li>
+              <li>Pendiri: Muawiyah bin Abu Sufyan</li>
+            </ul>
+          </div>
+          <div class="compare-col">
+            <h4>Umayyah Andalusia</h4>
+            <ul class="list-clean">
+              <li>756–1031 M (275 tahun)</li>
+              <li>Pusat: Cordoba, Spanyol</li>
+              <li>Awalnya Emirat, lalu Kekhalifahan</li>
+              <li>Puncak peradaban Islam Barat</li>
+              <li>Runtuh oleh Reconquista</li>
+              <li>Bahasa: Arab + lokal</li>
+              <li>Pendiri: Abdurrahman Ad-Dakhil</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Kesamaan</div>
+        <ul class="list-clean">
+          <li>Sama-sama dari klan Umayyah (Bani Umayyah, Quraisy)</li>
+          <li>Sama-sama menggunakan sistem monarki herediter</li>
+          <li>Sama-sama mengembangkan ilmu pengetahuan dan arsitektur</li>
+          <li>Sama-sama menggunakan bahasa Arab sebagai bahasa resmi pemerintahan</li>
+        </ul>
+      </div>
+      <div class="key-box">
+        <h4>🔑 Hubungan Keduanya</h4>
+        <p>Umayyah Andalusia adalah <strong>pelarian</strong> dari Umayyah Damaskus. Abdurrahman Ad-Dakhil lolos dari pembantaian Abbasiyah dan mendirikan kembali kerajaan Umayyah di Barat.</p>
+      </div>
+    `
+  },
+  {
+    id: 33, soal: "Soal No. 33", icon: "🔢",
+    title: "Ilmuwan Matematika Abbasiyah",
+    desc: "Mengidentifikasi ilmuwan matematika era Abbasiyah",
+    color: "#1A7DA8",
+    content: `
+      <div class="section">
+        <div class="section-title">Ilmuwan Matematika & Sains Abbasiyah</div>
+        <div class="person-card">
+          <div class="person-avatar">🔢</div>
+          <div>
+            <div class="person-name">Al-Khawarizmi (780–850 M)</div>
+            <div class="person-role">Bapak Aljabar</div>
+            <div class="person-desc">Karya: <em>Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal Muqabala</em> → "Algebra" berasal dari al-jabr. Kata "Algorithm" dari namanya. Memperkenalkan sistem angka Arab (termasuk nol) ke Eropa.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">📐</div>
+          <div>
+            <div class="person-name">Al-Battani (858–929 M)</div>
+            <div class="person-role">Astronom & Matematikawan</div>
+            <div class="person-desc">Menghitung panjang tahun matahari dengan sangat akurat. Mengembangkan trigonometri. Copernicus mengutip karyanya.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🌐</div>
+          <div>
+            <div class="person-name">Umar Khayyam (1048–1131 M)</div>
+            <div class="person-role">Matematika, Astronomi, Puisi</div>
+            <div class="person-desc">Merumuskan kalender Jalali (lebih akurat dari kalender Gregorian). Memecahkan persamaan kubik. Terkenal juga dengan puisi <em>Rubaiyat</em>.</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar">🔭</div>
+          <div>
+            <div class="person-name">Al-Biruni (973–1048 M)</div>
+            <div class="person-role">Ensiklopedis Universal</div>
+            <div class="person-desc">Menghitung jari-jari bumi dengan metode trigonometri. Menulis tentang India, mineralogi, farmasi. Disebut "Bapak Antropologi Modern."</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 34, soal: "Soal No. 34", icon: "🤝",
+    title: "Kolaborasi Ilmuwan Peradaban Islam",
+    desc: "Analisis kolaborasi antar-ilmuwan dalam peradaban Islam (C4)",
+    color: "#5A3472",
+    content: `
+      <div class="section">
+        <div class="section-title">Model Kolaborasi di Baitul Hikmah</div>
+        <div class="highlight-box">
+          <h4>Multidisiplin & Multikultural</h4>
+          <p>Baitul Hikmah di Baghdad menjadi contoh kolaborasi terbaik: Muslim, Kristen, Yahudi, dan Sabeans bekerja bersama menerjemahkan dan mengembangkan ilmu dari berbagai peradaban (Yunani, Persia, India, Mesir Kuno).</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Contoh Kolaborasi Terkenal</div>
+        <ul class="list-clean">
+          <li><strong>Hunain bin Ishaq</strong> (Nestorian Kristen) + tim Muslim → Menerjemah Galen, Hippocrates, Aristoteles ke Arab</li>
+          <li><strong>Al-Khawarizmi + Al-Farghani</strong> → Kolaborasi matematika-astronomi di Baitul Hikmah</li>
+          <li><strong>Ibnu Rusyd + Ibnu Tufail</strong> → Andalusia: saling mempengaruhi dalam filsafat</li>
+          <li><strong>Ibnu Sina + Al-Biruni</strong> → Koresponden tentang fisika Aristoteles</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">Faktor Pendorong Kolaborasi</div>
+        <ul class="list-clean">
+          <li>Dukungan penuh dari khalifah (pendanaan, fasilitas)</li>
+          <li>Toleransi intelektual dalam Islam terhadap ilmu dari mana saja</li>
+          <li>Sistem penggajian ilmuwan yang baik</li>
+          <li>Kebutuhan praktis: astronomi untuk ibadah, kedokteran untuk umum</li>
+          <li>Hadits: "Tuntutlah ilmu walau sampai ke negeri Cina"</li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    id: 35, soal: "Soal No. 35", icon: "🚀",
+    title: "Faktor Kejayaan Abbasiyah",
+    desc: "Analisis faktor-faktor yang membawa Abbasiyah ke puncak kejayaan (C4)",
+    color: "#1A6B4A",
+    content: `
+      <div class="section">
+        <div class="section-title">Faktor-Faktor Kejayaan</div>
+        <div class="info-row">
+          <div class="info-icon">📚</div>
+          <div>
+            <div class="info-label">1. Semangat Keilmuan</div>
+            <div class="info-text">Penerjemahan besar-besaran di Baitul Hikmah. Khalifah membayar mahal buku-buku ilmu pengetahuan. "Berat emas setara berat buku yang diterjemahkan."</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌍</div>
+          <div>
+            <div class="info-label">2. Toleransi & Inklusivitas</div>
+            <div class="info-text">Mawali (non-Arab) diberikan peran setara. Menteri-menteri dari Persia (Barmakid) memegang jabatan tinggi. Ilmuwan dari semua agama diajak bekerja.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">💰</div>
+          <div>
+            <div class="info-label">3. Kemakmuran Ekonomi</div>
+            <div class="info-text">Baghdad di persimpangan jalur sutra. Perdagangan internasional berkembang pesat. Surplus ekonomi membiayai ilmu dan seni.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">👑</div>
+          <div>
+            <div class="info-label">4. Kepemimpinan Visioner</div>
+            <div class="info-text">Harun Al-Rasyid dan Al-Ma'mun secara personal mendukung ilmuwan. Al-Ma'mun sendiri terlibat dalam diskusi ilmiah dan teologis.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏙️</div>
+          <div>
+            <div class="info-label">5. Baghdad sebagai Pusat Dunia</div>
+            <div class="info-text">Kota melingkar yang dirancang sempurna. Populasi 1-2 juta jiwa pada puncaknya. Menarik ilmuwan, pedagang, diplomat dari seluruh dunia.</div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-hint">
+        <div class="quiz-hint-title">💡 Hapal dengan STKK-B</div>
+        <p><strong>S</strong>emangat ilmu · <strong>T</strong>oleransi · <strong>K</strong>emakmuran ekonomi · <strong>K</strong>epemimpinan visioner · <strong>B</strong>aghdad sebagai pusat = 5 faktor kejayaan Abbasiyah</p>
+      </div>
+    `
+  }
+];
+
+// ── RENDER HOME CARDS ──────────────────────────────────────────────────────
+const grid = document.querySelector('.chapter-grid');
+const visited = new Set(JSON.parse(localStorage.getItem('ski_visited') || '[]'));
+
+function renderCards() {
+  grid.innerHTML = '';
+  chapters.forEach(ch => {
+    const card = document.createElement('div');
+    card.className = 'chapter-card';
+    card.style.setProperty('--accent-color', ch.color);
+    const isDone = visited.has(ch.id);
+    card.innerHTML = `
+      <div class="card-soal">${ch.soal} ${isDone ? '✅' : ''}</div>
+      <div class="card-icon">${ch.icon}</div>
+      <div class="card-title">${ch.title}</div>
+      <div class="card-desc">${ch.desc}</div>
+    `;
+    card.onclick = () => openPage(ch.id);
+    grid.appendChild(card);
+  });
+  updateProgress();
+}
+
+function updateProgress() {
+  const pct = Math.round((visited.size / 35) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressCount').textContent = visited.size + '/35';
+}
+
+// ── RENDER PAGES ───────────────────────────────────────────────────────────
+const container = document.getElementById('pages-container');
+chapters.forEach((ch, idx) => {
+  const page = document.createElement('div');
+  page.className = 'page';
+  page.id = `page-${ch.id}`;
+  page.innerHTML = `
+    <div class="page-hero" style="background: linear-gradient(135deg, ${ch.color}18, transparent);">
+      <button class="back-btn" onclick="goHome()">← Kembali ke Daftar</button>
+      <div class="page-number" style="color:${ch.color}">${ch.soal} dari 35</div>
+      <h2 class="page-title">${ch.icon} ${ch.title}</h2>
+      <p class="page-sub">${ch.desc}</p>
+    </div>
+    <div class="page-content">
+      ${ch.content}
+    </div>
+    <div class="page-nav">
+      <button class="nav-btn" onclick="navigatePage(${ch.id}, -1)" ${idx === 0 ? 'disabled' : ''}>← Sebelumnya</button>
+      <div class="nav-page-label">${ch.id} / 35</div>
+      <button class="nav-btn" onclick="navigatePage(${ch.id}, 1)" ${idx === 34 ? 'disabled' : ''}>Selanjutnya →</button>
+    </div>
+  `;
+  container.appendChild(page);
+});
+
+// ── NAVIGATION ─────────────────────────────────────────────────────────────
+let currentPage = null;
+
+function openPage(id) {
+  document.getElementById('home').style.display = 'none';
+  if (currentPage) document.getElementById(`page-${currentPage}`).classList.remove('active');
+  document.getElementById(`page-${id}`).classList.add('active');
+  currentPage = id;
+  visited.add(id);
+  localStorage.setItem('ski_visited', JSON.stringify([...visited]));
+  window.scrollTo(0, 0);
+}
+
+function goHome() {
+  if (currentPage) document.getElementById(`page-${currentPage}`).classList.remove('active');
+  currentPage = null;
+  document.getElementById('home').style.display = 'flex';
+  renderCards();
+  window.scrollTo(0, 0);
+}
+
+function navigatePage(currentId, dir) {
+  const idx = chapters.findIndex(c => c.id === currentId);
+  const next = chapters[idx + dir];
+  if (next) openPage(next.id);
+}
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+renderCards();
+</script>
+</body>
+</html>
